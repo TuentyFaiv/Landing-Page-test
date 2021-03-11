@@ -1,0 +1,52 @@
+@import '../utils/mixins.scss';
+$hero: url('../../images/bg-hero.png');
+
+.sectionOne {
+  @include flex-box(center);
+  align-items: flex-start;
+  flex-direction: column  ;
+  padding: 5rem;
+  color: white;
+  background-image: $hero;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  &__title {
+    @include fonts(bold, 3.8rem);
+    text-transform: uppercase;
+    line-height: 4.6rem;
+    letter-spacing: .5rem;
+  }
+  &__description {
+    margin: 4rem 0;
+    @include fonts(normal, 1.6rem);
+    line-height: 140%;
+  }
+}
+
+
+@media screen and (min-width: 426px) {
+  .sectionOne {
+    &__description {
+      max-width: 40rem;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .sectionOne {
+    min-height: 90vh;
+    &__title {
+      margin-top: 10.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sectionOne {
+    &__description {
+      margin: 1rem 0;
+    }
+  }
+}

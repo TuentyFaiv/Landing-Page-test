@@ -1,9 +1,11 @@
 import React from 'react';
 
+import SectionOne from '@containers/SectionOne';
+
 const Home = () => {
   return (
     <main>
-      <h1>Home Page</h1>
+      <SectionOne />
     </main>
   );
 }
