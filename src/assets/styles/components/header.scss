@@ -19,7 +19,7 @@
         margin: 0 2rem;
       }
       a {
-        @include fontsize(1.2rem);
+        @include fonts(400, 1.2rem);
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -36,7 +36,7 @@
   }
   &__signin {
     @include flex-box(center);
-    @include fontsize(1.2rem);
+    @include fonts(400, 1.2rem);
     display: none;
     color: white;
     text-transform: uppercase;

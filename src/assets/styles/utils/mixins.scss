@@ -4,6 +4,7 @@
   justify-content: $content;
 }
 
-@mixin fontsize($size) {
+@mixin fonts($weight,$size) {
   font-size: $size;
+  font-weight: $weight;
 }
