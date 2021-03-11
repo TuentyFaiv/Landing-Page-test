@@ -56,14 +56,7 @@ module.exports = {
       },
       {
         test: /\.(png|svg|mp4)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: DEV ? 'assets/[name].[ext]' : 'assets/[name].[hash].[ext]',
-            },
-          },
-        ],
+        use: 'url-loader',
       },
     ],
   },
