@@ -1,0 +1,103 @@
+@import '../utils/mixins.scss';
+
+.header {
+  @include flex-box(space-between);
+  width: 100%;
+  height: 10.2rem;
+  background-color: #13233F;
+  padding: 1.5rem;
+  &__logo {
+    width: 16.5rem;
+    height: 2.6rem;
+  }
+  &__navigation {
+    display: none;
+    ul {
+      @include flex-box(center);
+      list-style: none;
+      li {
+        margin: 0 2rem;
+      }
+      a {
+        @include fontsize(1.2rem);
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__section{
+    &-right {
+      @include flex-box(space-between);
+    }
+    &-left {
+      @include flex-box(space-between);
+    }
+  }
+  &__signin {
+    @include flex-box(center);
+    @include fontsize(1.2rem);
+    display: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  &__signup {
+    @extend .header__signin;
+    &::before {
+      display: block;
+      content: '|'; 
+      margin: 0 2rem;
+    }
+  }
+  &__language-icon {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    &::after {
+      display: block;
+      content: 'ES';
+      color: white;
+      margin-left: 1rem;
+    }
+  }
+  &__menu {
+    width: 2.2rem;
+    height: 2rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    &__navigation {
+      display: flex;
+    }
+    &__signin {
+      display: flex;
+    }
+    &__language-icon {
+      margin-left: 2.5rem;
+    }
+    &__menu {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 3rem;
+    &__navigation {
+      ul {
+        li {
+          margin: 0 2.4rem;
+        }
+      }
+    }
+  }
+}

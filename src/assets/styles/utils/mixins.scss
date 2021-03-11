@@ -1,0 +1,9 @@
+@mixin flex-box($content) {
+  display: flex;
+  align-items: center;
+  justify-content: $content;
+}
+
+@mixin fontsize($size) {
+  font-size: $size;
+}
