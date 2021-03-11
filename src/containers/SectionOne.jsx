@@ -2,6 +2,8 @@ import React from 'react';
 
 import '@styles/containers/sectionOne.scss';
 
+import Button from '@components/Button';
+
 const SectionOne = () => {
   return (
     <section className="sectionOne">
@@ -9,6 +11,7 @@ const SectionOne = () => {
       <p className="sectionOne__description">
         Alcanza el más alto nivel de inversiones en línea gracias a nuestros tutoriales de aprendizaje; apto para todos los niveles de experiencia.
       </p>
+      <Button text="Ver más"/>
     </section>
   );
 }
