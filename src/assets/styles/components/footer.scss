@@ -1,0 +1,47 @@
+@import '../utils/mixins.scss';
+
+.footer {
+  width: 100%;
+  @include flex-box(space-between);
+  flex-direction: column;
+  color: white;
+  background-color: #25395A;
+  padding: 3rem 2rem;
+  &__logo {
+    width: 22rem;
+    height: 3.5rem;
+  }
+  &__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "accounts legals" "about legals" "platform legals";
+    margin-top: 2rem;
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+    &-accounts {
+      grid-area: accounts;
+    }
+    &-legals {
+      grid-area: legals;
+    }
+    &-about {
+      grid-area: about;
+    }
+    &-platform {
+      grid-area: platform;
+    }
+  }
+  h4 {
+    @include fonts(900, 1.1rem);
+  }
+  p {
+    @include fonts(400, 1rem);
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    flex-direction: row;
+  }
+}
